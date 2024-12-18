@@ -1,17 +1,20 @@
 ## Add user
 
 ```bash
-adduser <username>
+adduser USERNAME
 
 # add user to sudo
-usermod -aG sudo <username>
+usermod -aG sudo USERNAME
 
 # force in code
 nano /etc/sudoers
 # add line:
-# <username> ALL=(ALL:ALL) ALL
+# USERNAME ALL=(ALL:ALL) ALL
 # save
 # --> reboot server
+
+# update user password
+sudo passwd USERNAME
 ```
 
 ## SSH

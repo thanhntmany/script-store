@@ -33,3 +33,8 @@ sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O 
 sed -i 's/^ZSH_THEME=.*/ZSH_THEME="josh"/' ~/.zshrc
 sudo chsh -s $((which zsh)||(which bash)) $USER
 zsh ~/.zshrc
+
+# brltty provides access to the Linux/Unix console (when in text mode) for a blind person using a refreshable braille
+# It takes over tty devices. Then, many device which connect to pc through usb hub will be unrecognized.
+sudo apt remove -y brltty
+sudo apt autoremove -y
